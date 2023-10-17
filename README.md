@@ -4,7 +4,7 @@
 ![Build Status](https://github.com/A2Y-D5L/gofwd/workflows/Go/badge.svg)
 ![License](https://img.shields.io/github/license/A2Y-D5L/gofwd)
 
-Move forward with `gofwd`: Effortlessly keep your Go installation in step with the latest release.
+Move forward with `gofwd` to effortlessly keep your Go installation in step with the latest release.
 
 ## Overview
 
