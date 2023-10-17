@@ -1,0 +1,61 @@
+linters-settings:
+  govet:
+    check-shadowing: true
+  golint:
+    min-confidence: 0
+  gofmt:
+    simplify: true
+  goimports:
+    local-prefixes: module github.com/a2y-d5l/gofwd
+  maligned:
+    suggest-new: true
+  dupl:
+    threshold: 100
+  goconst:
+    min-len: 2
+    min-occurrences: 3
+
+linters:
+  disable-all: true
+  enable:
+    - deadcode
+    - gofmt
+    - golint
+    - govet
+    - goimports
+    - misspell
+    - unused
+    - structcheck
+    - varcheck
+    - ineffassign
+    - errcheck
+    - staticcheck
+    - typecheck
+    - unconvert
+    - gosimple
+    - nakedret
+    - interfacer
+    - maligned
+    - dupl
+    - goconst
+    - unparam
+    - gosec
+
+run:
+  concurrency: 4
+  timeout: 1m
+  issues-exit-code: 1
+  tests: true
+
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - gocyclo
+    - path: vendor/
+      linters:
+        - maligned
+        - dupl
+        - gosec
+  max-issues-per-linter: 0
+  max-same-issues: 0
